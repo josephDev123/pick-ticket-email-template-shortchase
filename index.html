@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pick Ticket</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        background-color: rgb(240, 240, 240);
+      }
+      .header {
+        background-color: #ffebb1;
+        height: fit-content;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        font-weight: bolder;
+      }
+
+      .header :nth-child(2) {
+        margin-top: 0.5rem;
+      }
+
+      .salutation {
+        margin-top: 1rem;
+        padding: 0 0.3rem;
+      }
+
+      .salutation + p {
+        margin-top: 1rem;
+        padding: 0 0.3rem;
+      }
+
+      .content-wrapper {
+        /* border: 1px solid red; */
+        padding: 1rem;
+        margin-top: 0.4rem;
+        background-color: rgb(255, 255, 118);
+      }
+
+      .ticket-title {
+        text-align: center;
+        margin-top: 0.3rem;
+        font-weight: bold;
+        font-size: larger;
+      }
+
+      .ticket-amount {
+        text-align: center;
+        /* font-size: larger; */
+      }
+
+      .ruler {
+        width: 100%;
+        background-color: black;
+        height: 1px;
+        background-color: gray;
+        margin-top: 1rem;
+      }
+
+      .pick-section,
+      .schedule-section,
+      .analysis-section,
+      .prediction-section,
+      .whereToPlay-section {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-top: 1rem;
+        gap: 10px;
+      }
+
+      .pick-section > div,
+      .schedule-section > div,
+      .analysis-section > div,
+      .prediction-section > div,
+      .whereToPlay-section > div {
+        background-color: #ffbc01;
+        height: fit-content;
+        width: fit-content;
+        font-weight: bold;
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+      }
+
+      .pick-section .dot {
+        background-color: black;
+        height: fit-content;
+        width: fit-content;
+        padding: 0.13rem;
+        border-radius: 100%;
+        align-self: center;
+      }
+
+      .pick-section :nth-child(4) {
+        font-weight: bolder;
+      }
+
+      .show-all-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      .show-all-btn {
+        border-radius: 5rem;
+        height: fit-content;
+        width: fit-content;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: #ffbc01;
+        border: none;
+        font-weight: bolder;
+      }
+
+      .show-all-btn:hover {
+        cursor: pointer;
+      }
+
+      .closing-signature {
+        margin-top: 2rem;
+        padding: 0 0.3rem;
+      }
+
+      .footer {
+        padding: 0 0.3rem;
+      }
+
+      .Terms-condition {
+        display: flex;
+        gap: 1rem;
+        margin: 0.5rem 0rem 1rem 0rem;
+      }
+
+      .Terms-condition > a {
+        color: rgb(8, 116, 8);
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 80%;
+        }
+      }
+
+      @media screen and (max-width: 425px) {
+        .container {
+          width: 90%;
+        }
+        .pick-section,
+        .schedule-section,
+        .analysis-section,
+        .prediction-section,
+        .whereToPlay-section {
+          display: flex;
+          flex-direction: column;
+          /* align-items: center;
+        justify-content: start; */
+          margin-top: 1rem;
+          gap: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://github.com/shrtchz/client.frontend/blob/main/src/assets/shortchase%20logo%20plain.png"
+          alt="Shortchase logo"
+        />
+        <h2>Pick Ticket</h2>
+      </div>
+      <h2 class="salutation">Hey there Babat</h2>
+      <p>
+        Thank you for shopping at Shortchase marketplace. The listings order was
+        successfully delivered to your inbox, pls see below.
+      </p>
+
+      <div class="content-wrapper">
+        <h3 class="ticket-title">The Etihad rumble is about to go down</h3>
+        <p class="ticket-amount">$20</p>
+        <div class="ruler"></div>
+        <!-- pick section -->
+        <div class="pick-section">
+          <div>PICK</div>
+          <span>Man city vs Marseille</span>
+          <span class="dot"></span>
+          <span>Champion League</span>
+        </div>
+        <!-- schedule section -->
+        <div class="schedule-section">
+          <div>SCHEDULE</div>
+          <span>Dec 09 2020 - 08:00:00 PM</span>
+          <span
+            style="
+              font-weight: bold;
+              background-color: #ffbc01;
+              padding: 0.3rem;
+              border-radius: 0.3rem;
+            "
+            >ODDS</span
+          >
+          <span>0.33</span>
+        </div>
+
+        <div class="analysis-section">
+          <div>ANALYSIS</div>
+          <span
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Temporibus quisquam repellendus eaque placeat, ullam velit
+            doloremque recusandae, vero voluptatibus eius quod error sed,
+            eligendi reiciendis quis? Officia eaque quasi repellat!</span
+          >
+        </div>
+
+        <div class="prediction-section">
+          <div>PREDICTION</div>
+          <span>Home team straight win</span>
+        </div>
+
+        <div class="whereToPlay-section">
+          <div>WHERE TO PLAY</div>
+          <span>Betway</span>
+        </div>
+      </div>
+      <div class="show-all-btn-wrapper">
+        <button class="show-all-btn">Show all</button>
+      </div>
+
+      <div class="closing-signature">
+        <p>Best regards,</p>
+        <p style="margin-top: 0.8rem">Team Shortchase</p>
+      </div>
+
+      <div class="footer" style="margin-top: 3rem">
+        <p><span>2023</span> &copy; Shortchase, Inc. All rights reserved.</p>
+        <div class="Terms-condition">
+          <a href="#">Terms</a>
+          <a href="#">Private Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const button = document.querySelector(".show-all-btn");
+      const handleGoToUserPick = () => {
+        const pickUrl = "http://127.0.0.1:5173/market-place/picks/ticket/id";
+        alert("pick");
+      };
+      button.addEventListener("click", handleGoToUserPick);
+    </script>
+  </body>
+</html>
